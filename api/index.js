@@ -10,7 +10,7 @@ router.get('/yna', (req, res) => {
     if (err) {
       res.sendStatus(400);
     } else {
-      console.log('sending completed!', res)
+      console.log('sending completed!')
     }
   })
 });

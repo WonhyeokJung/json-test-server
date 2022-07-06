@@ -22,6 +22,12 @@ const path = require('path');
 app.listen(3000, () => {
   console.log('Server Started! Port 3000')
 });
+
+app.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
 // *************************공용끝*****************************
 
 // localhost:PORT_NUMBER로 접속하면 나올 곳 설정.
